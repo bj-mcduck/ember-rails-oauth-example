@@ -1,0 +1,10 @@
+%h1 User sign in
+= hb 'if auth.signedIn' do
+  %h2 You're already signed in.
+
+  = hb 'else'
+
+  .btn-group
+    %a.btn.btn-primary{ href: "/auth/twitter" } Twitter
+    %a.btn.btn-primary{ href: "/auth/facebook" } Facebook
+    %a.btn.btn-primary{ href: "/auth/google_oauth2" } Google+

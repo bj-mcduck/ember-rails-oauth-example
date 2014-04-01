@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title= content_for?(:title) ? yield(:title) : 'Mystics'
+    %meta{ :name => "description", :content => "#{ content_for?(:description) ? yield(:description) : 'Mystics' }" }
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", :name => "viewport"}
+    %meta{:content => "", :name => "author"}
+
+    / Le HTML5 shim, for IE6-8 support of HTML5 elements
+    /[if lt IE 9]
+      = javascript_include_tag "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js", "https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"
+
+    = stylesheet_link_tag    "application", :media => "all", "data-turbolinks-track" => true
+    = jquery_include_tag :google
+    = jquery_ui_include_tag :google
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    = yield

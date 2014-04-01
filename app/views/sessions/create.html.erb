@@ -1,0 +1,5 @@
+<%= javascript_tag do %>
+  localStorage['currentUser'] = "<%= @user.id %>";
+  App.set("currentUser", <%= @user.id %>);
+  // window.history.pushState( "Redirecting to Root URL", "Title", "/" );
+<% end %>

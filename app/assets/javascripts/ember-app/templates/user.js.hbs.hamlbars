@@ -1,0 +1,4 @@
+%h1= hb 'screen_name'
+
+= hb 'email'
+#profile

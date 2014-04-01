@@ -1,0 +1,20 @@
+@import 'variables';
+
+.fa-facebook-square,
+.fa.fa-facebook-square:hover {
+  color: $facebook;
+}
+
+.fa-google-plus-square,
+.fa.fa-google-plus-square:hover {
+  color: $google-plus;
+}
+
+.fa-twitter-square,
+.fa.fa-twitter-square:hover {
+  color: $twitter;
+}
+
+.fa.is-authenticated {
+  color: hsl(0, 0%, 70%);
+}
