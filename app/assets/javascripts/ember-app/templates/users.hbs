@@ -1,0 +1,20 @@
+<h1>Users</h1>
+
+<div id="users">
+  {{#each user in model}}
+    <article class="user">
+      <h4>
+        {{#link-to "user" user}}
+          {{user.screen_name}}
+          <small>
+            {{#link-to "user.edit" user class="btn btn-default btn-xs"}}
+              <i class="fa fa-pencil"></i>
+            {{/link-to}}
+          </small>
+        {{/link-to}}
+      </h4>
+    </article>
+  {{else}}
+    No Users yet.
+  {{/each}}
+</div>
