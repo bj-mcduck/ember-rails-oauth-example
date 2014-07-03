@@ -1,0 +1,12 @@
+<h1>User sign in</h1>
+{{#if auth.signedIn}}
+  <h2>You're already signed in.</h2>
+
+{{else}}
+
+  <div class="btn-group">
+    <a href="/auth/twitter" class="btn btn-primary">Twitter</a>
+    <a href="/auth/facebook" class="btn btn-primary">Facebook</a>
+    <a href="/auth/google_oauth2" class="btn btn-primary">Google +</a>
+  </div>
+{{/if}}

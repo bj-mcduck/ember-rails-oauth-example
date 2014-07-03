@@ -1,0 +1,54 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <container>
+    <div class="navbar-header">
+      <btn class="navbar-toggle" data-target=".navbar-collapse" data-toggle=".collapse" type="button">
+        <span class="sr-only"> Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </btn>
+      {{#link-to "index" class="navbar-brand"}}
+        Your Fancy Ember App
+      {{/link-to}}
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          {{#link-to "users"}}
+            Users
+          {{/link-to}}
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {{#if userSignedIn}}
+          <li>
+            <btn-group>
+              <btn class="btn navbar-btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                {{signedInUser.screen_name}}
+                <span class="caret"></span>
+              </btn>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  {{#link-to "user" signedInUser}}
+                    View Profile
+                  {{/link-to}}
+                </li>
+                <li>
+                  <a {{action "signOut"}} href="/sign-out">
+                    Sign Out
+                  </a>
+                </li>
+              </ul>
+            </btn-group>
+          </li>
+        {{else}}
+          <li>
+            {{#link-to "sign-in"}}
+              Sign In
+            {{/link-to}}
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </container>
+</nav>

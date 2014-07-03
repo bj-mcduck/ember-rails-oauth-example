@@ -1,6 +1,0 @@
-%header
-  = hb 'partial "partials/header"'
-
-%main
-  .container
-    = hb 'outlet'
